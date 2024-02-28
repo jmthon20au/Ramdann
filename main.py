@@ -1,14 +1,9 @@
 import requests
 import telebot 
-bot = telebot.TeleBot("6794649818:AAHfzQYemO2QmSnZF4boHzSyxZ329sSf-5s")
+bot = telebot.TeleBot("6794649818:AAHWoOPHuLNeg8rBkvGJtdVUAeMf9CpkZf0")
 @bot.message_handler(commands=["start"])
 def s(message):
-    bot.reply_to(message ,'''
-    اهلا بك في هذا البوت ❤✅
-    ارسل اسمك وانتظر صور التهاني 🫶🏻🎁 بحقوقك 
-    ~ مطور البوت : @altaee_z
-    ♡ قناة المطور : @my00002
-    ''')
+    bot.reply_to(message, "اهلا بك في هذا البوت ❤ \n ارسل اسمك لعرض المفاجئات 🎁 \n المطور @altaee_z , @my00002")
 @bot.message_handler(func=lambda message:True)
 def ss(message):
     mess = message.text
@@ -41,6 +36,6 @@ def ss(message):
             bot.send_photo(message.chat.id ,req,caption=" - @my00002")
         except:
             pass
-    bot.reply_to(message ,"تم الانتهاء من الصنع لا تنسى الانضمام الى قناة المطور @my00002 🌺."
-    
+    bot.reply_to(message , "تم الانتهاء من التهنئات ✅ t.me/my00002")
+
 bot.infinity_polling()
